@@ -16,7 +16,9 @@ setup(
     name='jpush',
     version=version,
     description='JPush\'s officially supported Python client library',
-    keywords=('JPush', 'JPush API', 'Android Push', 'iOS Push'),
+    keywords=('JPush', 'JPush API', 'Android Push', 'iOS Push',
+              'JMessage', 'JMessage API', 'Android IM', 'iOS IM'
+    ),
     license='MIT License',
     long_description=open("README.rst", "r").read(),
 
@@ -24,7 +26,7 @@ setup(
     author='jpush',
     author_email='support@jpush.cn',
 
-    packages=['jpush', 'jpush.push', 'jpush.device'],
+    packages=['jpush', 'jpush.push', 'jpush.device', 'jmessage', 'jmessage.core'],
     platforms='any',
     classifiers=[
         'Environment :: Console',
@@ -36,5 +38,6 @@ setup(
 
     install_requires=[
         'requests>=1.2',
+        'pycurl>=7.19.5',
     ],
 )
